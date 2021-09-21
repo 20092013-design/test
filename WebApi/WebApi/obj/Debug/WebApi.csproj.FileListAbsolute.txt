@@ -1,0 +1,472 @@
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\ApplicationInsights.config
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\csc.exe
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\vbc.exe
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\WebApi.dll.config
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\WebApi.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\WebApi.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Antlr3.Runtime.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\EntityFramework.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.Web.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Newtonsoft.Json.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Owin.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Buffers.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Memory.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Cors.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Helpers.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.Cors.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.Owin.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Mvc.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Optimization.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Razor.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.WebPages.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\WebGrease.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.Web.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.Web.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.ApplicationInsights.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.ApplicationInsights.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Buffers.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Memory.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.Cors.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Newtonsoft.Json.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Helpers.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Mvc.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Optimization.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Razor.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.WebPages.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Antlr3.Runtime.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\EntityFramework.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\EntityFramework.SqlServer.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\bin\System.Web.Http.Owin.xml
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\obj\Debug\WebApi.dll
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\obj\Debug\WebApi.pdb
+C:\Users\patrick\angular\PfApi\new\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
+E:\WebApi\WebApi\obj\Debug\WebApi.csprojResolveAssemblyReference.cache
+E:\WebApi\WebApi\obj\Debug\WebApi.dll
+E:\WebApi\WebApi\obj\Debug\WebApi.pdb
+E:\WebApi\WebApi\bin\ApplicationInsights.config
+E:\WebApi\WebApi\bin\roslyn\csc.exe
+E:\WebApi\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\WebApi\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\WebApi\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\WebApi\WebApi\bin\roslyn\System.Collections.Immutable.dll
+E:\WebApi\WebApi\bin\roslyn\System.Reflection.Metadata.dll
+E:\WebApi\WebApi\bin\roslyn\vbc.exe
+E:\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe
+E:\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe.config
+E:\WebApi\WebApi\bin\WebApi.dll.config
+E:\WebApi\WebApi\bin\WebApi.dll
+E:\WebApi\WebApi\bin\WebApi.pdb
+E:\WebApi\WebApi\bin\Antlr3.Runtime.dll
+E:\WebApi\WebApi\bin\EntityFramework.dll
+E:\WebApi\WebApi\bin\EntityFramework.SqlServer.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.Web.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.dll
+E:\WebApi\WebApi\bin\Microsoft.ApplicationInsights.dll
+E:\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.dll
+E:\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.dll
+E:\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+E:\WebApi\WebApi\bin\Newtonsoft.Json.dll
+E:\WebApi\WebApi\bin\Owin.dll
+E:\WebApi\WebApi\bin\System.Buffers.dll
+E:\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
+E:\WebApi\WebApi\bin\System.Memory.dll
+E:\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+E:\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\WebApi\WebApi\bin\System.Web.Cors.dll
+E:\WebApi\WebApi\bin\System.Web.Helpers.dll
+E:\WebApi\WebApi\bin\System.Web.Http.Cors.dll
+E:\WebApi\WebApi\bin\System.Web.Http.dll
+E:\WebApi\WebApi\bin\System.Web.Http.Owin.dll
+E:\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+E:\WebApi\WebApi\bin\System.Web.Mvc.dll
+E:\WebApi\WebApi\bin\System.Web.Optimization.dll
+E:\WebApi\WebApi\bin\System.Web.Razor.dll
+E:\WebApi\WebApi\bin\System.Web.WebPages.Deployment.dll
+E:\WebApi\WebApi\bin\System.Web.WebPages.dll
+E:\WebApi\WebApi\bin\System.Web.WebPages.Razor.dll
+E:\WebApi\WebApi\bin\WebGrease.dll
+E:\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.pdb
+E:\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.xml
+E:\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.pdb
+E:\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.xml
+E:\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.pdb
+E:\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\WebApi\WebApi\bin\Microsoft.AI.Web.pdb
+E:\WebApi\WebApi\bin\Microsoft.AI.Web.xml
+E:\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.pdb
+E:\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.xml
+E:\WebApi\WebApi\bin\Microsoft.ApplicationInsights.pdb
+E:\WebApi\WebApi\bin\Microsoft.ApplicationInsights.xml
+E:\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\WebApi\WebApi\bin\System.Buffers.xml
+E:\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
+E:\WebApi\WebApi\bin\System.Memory.xml
+E:\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+E:\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\WebApi\WebApi\bin\System.Web.Http.xml
+E:\WebApi\WebApi\bin\System.Web.Http.Cors.xml
+E:\WebApi\WebApi\bin\Newtonsoft.Json.xml
+E:\WebApi\WebApi\bin\System.Web.Helpers.xml
+E:\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+E:\WebApi\WebApi\bin\System.Web.Mvc.xml
+E:\WebApi\WebApi\bin\System.Web.Optimization.xml
+E:\WebApi\WebApi\bin\System.Web.Razor.xml
+E:\WebApi\WebApi\bin\System.Web.WebPages.xml
+E:\WebApi\WebApi\bin\System.Web.WebPages.Deployment.xml
+E:\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
+E:\WebApi\WebApi\bin\Antlr3.Runtime.pdb
+E:\WebApi\WebApi\bin\EntityFramework.xml
+E:\WebApi\WebApi\bin\EntityFramework.SqlServer.xml
+E:\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.xml
+E:\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.xml
+E:\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\WebApi\WebApi\bin\System.Web.Http.Owin.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.csproj.AssemblyReference.cache
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\ApplicationInsights.config
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csc.exe
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\vbc.exe
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebApi.dll.config
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebApi.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebApi.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Antlr3.Runtime.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.SqlServer.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Web.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.ApplicationInsights.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Newtonsoft.Json.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Owin.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Buffers.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Memory.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Cors.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Helpers.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Cors.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Owin.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Mvc.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Optimization.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Razor.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Razor.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebGrease.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Web.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Web.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.ApplicationInsights.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.ApplicationInsights.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Buffers.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Memory.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Cors.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Newtonsoft.Json.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Helpers.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Mvc.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Optimization.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Razor.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Antlr3.Runtime.pdb
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.SqlServer.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Owin.xml
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csc.exe.config
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csc.rsp
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csi.exe
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csi.rsp
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.AppContext.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\vbc.exe.config
+C:\Users\admin\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\vbc.rsp
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.csproj.AssemblyReference.cache
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\ApplicationInsights.config
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebApi.dll.config
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebApi.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebApi.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csc.exe
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csc.exe.config
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csc.rsp
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csi.exe
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\csi.rsp
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.AppContext.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.Collections.Immutable.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.IO.FileSystem.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\System.Reflection.Metadata.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\vbc.exe
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\vbc.exe.config
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\vbc.rsp
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\roslyn\VBCSCompiler.exe.config
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Antlr3.Runtime.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.SqlServer.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Agent.Intercept.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Web.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.ApplicationInsights.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Newtonsoft.Json.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Owin.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Buffers.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Memory.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Cors.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Helpers.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Cors.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Owin.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Mvc.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Optimization.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Razor.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Deployment.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Razor.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\WebGrease.dll
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.DependencyCollector.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.PerfCounterCollector.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Web.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.Web.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AI.WindowsServer.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.ApplicationInsights.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.ApplicationInsights.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Buffers.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Diagnostics.DiagnosticSource.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Memory.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Cors.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Newtonsoft.Json.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Helpers.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Mvc.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Optimization.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Razor.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Deployment.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Antlr3.Runtime.pdb
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\EntityFramework.SqlServer.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Core.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Facebook.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Cookies.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.OAuth.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Google.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.Twitter.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\bin\System.Web.Http.Owin.xml
+D:\PROJECTS\Power Financial Project\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete

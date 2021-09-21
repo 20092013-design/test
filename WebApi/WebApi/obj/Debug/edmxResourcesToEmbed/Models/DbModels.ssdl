@@ -1,0 +1,2432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PowerFinancialDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CompanyStructureContent">
+    <Key>
+      <PropertyRef Name="StructureId" />
+    </Key>
+    <Property Name="StructureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+    <Property Name="AttachMember" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AttachCreditOfficer" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoanApplicationCharges">
+    <Key>
+      <PropertyRef Name="LoanApplicationChargesId" />
+    </Key>
+    <Property Name="LoanApplicationChargesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" />
+    <Property Name="LoanTypeChargesId" Type="int" />
+    <Property Name="LoanChargesListId" Type="int" />
+    <Property Name="IsPercentage" Type="bit" />
+    <Property Name="IsTariffBased" Type="bit" />
+    <Property Name="Value" Type="money" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAccountTransactions">
+    <Key>
+      <PropertyRef Name="AccountTransactionId" />
+    </Key>
+    <Property Name="AccountTransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionDate" Type="smalldatetime" />
+    <Property Name="ValueDate" Type="smalldatetime" />
+    <Property Name="MemberNo" Type="varchar" MaxLength="250" />
+    <Property Name="DocumentNo" Type="varchar" MaxLength="250" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="ModeOfPayment" Type="varchar" MaxLength="250" />
+    <Property Name="TransType" Type="varchar" MaxLength="250" />
+    <Property Name="BaseCurrencyId" Type="int" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="CurrencySymbol" Type="varchar" MaxLength="250" />
+    <Property Name="ExchangeRate" Type="money" />
+    <Property Name="Commission" Type="bit" />
+    <Property Name="PaidBy" Type="varchar" MaxLength="250" />
+    <Property Name="LocalCurrencyAmount" Type="money" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="AmountCharge" Type="money" />
+    <Property Name="BalanceAmount" Type="money" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="IsBlocked" Type="bit" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAutoGenNumbers">
+    <Key>
+      <PropertyRef Name="AutoGenNumberId" />
+    </Key>
+    <Property Name="AutoGenNumberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AutoGenNumberText" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AutoPrefixId" Type="int" Nullable="false" />
+    <Property Name="UsePrefix" Type="bit" Nullable="false" />
+    <Property Name="Start" Type="int" Nullable="false" />
+    <Property Name="Stop" Type="int" Nullable="false" />
+    <Property Name="StartFrom" Type="int" Nullable="false" />
+    <Property Name="AllowManual" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblAutoGenPrefixes">
+    <Key>
+      <PropertyRef Name="AutoPrefixId" />
+    </Key>
+    <Property Name="AutoPrefixId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrefixName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PrefixText" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsSystemAssisted" Type="bit" Nullable="false" />
+    <Property Name="IsDateRelated" Type="bit" Nullable="false" />
+    <Property Name="Today" Type="bit" Nullable="false" />
+    <Property Name="Month" Type="bit" Nullable="false" />
+    <Property Name="Year" Type="bit" Nullable="false" />
+    <Property Name="BranchPrefix" Type="bit" Nullable="false" />
+    <Property Name="UseBranchPrefix" Type="varchar" MaxLength="50" />
+    <Property Name="UseGroupPrefix" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblAutoGenSetups">
+    <Key>
+      <PropertyRef Name="SetName" />
+    </Key>
+    <Property Name="SetupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SetName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AutoGenNumberId" Type="int" Nullable="false" />
+    <Property Name="IsManual" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblBankBranches">
+    <Key>
+      <PropertyRef Name="BranchId" />
+    </Key>
+    <Property Name="BranchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BankId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblBanks">
+    <Key>
+      <PropertyRef Name="BankName" />
+    </Key>
+    <Property Name="BankId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblBeneficiaries">
+    <Key>
+      <PropertyRef Name="BeneficiaryId" />
+    </Key>
+    <Property Name="BeneficiaryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="RelationshipId" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Town" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Value" Type="money" Nullable="false" />
+    <Property Name="DOB" Type="smalldatetime" Nullable="false" />
+    <Property Name="IdNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCharges">
+    <Key>
+      <PropertyRef Name="ChargesId" />
+    </Key>
+    <Property Name="ChargesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="IsPercent" Type="bit" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Tariff" Type="bit" />
+    <Property Name="TariffAmount" Type="money" />
+    <Property Name="IgnoreLowLimit" Type="bit" />
+    <Property Name="LowerLimit" Type="money" />
+    <Property Name="UpperLimit" Type="money" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblClientType">
+    <Key>
+      <PropertyRef Name="ClientTypeName" />
+    </Key>
+    <Property Name="ClientTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientTypeName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblCollaterals">
+    <Key>
+      <PropertyRef Name="ColllateralId" />
+    </Key>
+    <Property Name="ColllateralId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollateralName" Type="varchar" MaxLength="250" />
+    <Property Name="HasTimeLimit" Type="bit" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUI" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCompanyBranches">
+    <Key>
+      <PropertyRef Name="CompanyBranchesId" />
+    </Key>
+    <Property Name="CompanyBranchesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblContacts">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Payroll" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="SearchName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsPerson" Type="bit" Nullable="false" />
+    <Property Name="NHIFNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="KRAPin" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="NSSFNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="HudumaNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Nullable="false" />
+    <Property Name="TitleId" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaritalStatusId" Type="int" Nullable="false" />
+    <Property Name="Telephone1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telephone2" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telephone3" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FaxNumber" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhysicalLocation" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostalAddress" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="HierarchyId" Type="int" Nullable="false" />
+    <Property Name="MemberStatusId" Type="int" Nullable="false" />
+    <Property Name="Blocked" Type="bit" Nullable="false" />
+    <Property Name="Gross" Type="money" Nullable="false" />
+    <Property Name="Nett" Type="money" Nullable="false" />
+    <Property Name="LevelofEducationId" Type="int" Nullable="false" />
+    <Property Name="BusinessSectorId" Type="int" Nullable="false" />
+    <Property Name="LevelofIncomeId" Type="int" Nullable="false" />
+    <Property Name="ClientTypeId" Type="int" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="IsRegister" Type="bit" Nullable="false" />
+    <Property Name="IsDormancy" Type="bit" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="SecurityQuestion" Type="int" Nullable="false" />
+    <Property Name="RegistrationCode" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="NationalityId" Type="int" Nullable="false" />
+    <Property Name="CompanyRegistrationDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="RegistrationDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="CompanyCertificateNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BankId" Type="int" Nullable="false" />
+    <Property Name="BankBranchId" Type="int" Nullable="false" />
+    <Property Name="BankAccountNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="MachineName" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SecurityAnswer" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SupervisedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="SupervisedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ModifiedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCreditOfficers">
+    <Key>
+      <PropertyRef Name="CreditOfficerId" />
+    </Key>
+    <Property Name="CreditOfficerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="DateJoined" Type="smalldatetime" />
+    <Property Name="IdNo" Type="varchar" MaxLength="250" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCurrency">
+    <Key>
+      <PropertyRef Name="CurrencyName" />
+    </Key>
+    <Property Name="CurrencyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CurrencyName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="CurrencySymbol" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsMainCurrency" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblDocumentTypes">
+    <Key>
+      <PropertyRef Name="DocumentTypeName" />
+    </Key>
+    <Property Name="DocumentTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentTypeName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblExchangeRate">
+    <Key>
+      <PropertyRef Name="ExchangeRateId" />
+    </Key>
+    <Property Name="ExchangeRateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuyRate" Type="money" Nullable="false" />
+    <Property Name="SellRate" Type="money" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblFiles">
+    <Key>
+      <PropertyRef Name="FileId" />
+    </Key>
+    <Property Name="FileId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="250" />
+    <Property Name="FileType" Type="varchar" MaxLength="150" />
+    <Property Name="DocumentTypeId" Type="int" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblGenders">
+    <Key>
+      <PropertyRef Name="GenderName" />
+    </Key>
+    <Property Name="GenderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GenderName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblIndexContacts">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="Subject" Type="varchar" MaxLength="250" />
+    <Property Name="Message" Type="varchar" MaxLength="800" />
+    <Property Name="IsRead" Type="bit" />
+    <Property Name="CreateBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreateOn" Type="smalldatetime" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblKins">
+    <Key>
+      <PropertyRef Name="KinId" />
+    </Key>
+    <Property Name="KinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="RelationId" Type="int" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="250" />
+    <Property Name="Town" Type="varchar" MaxLength="250" />
+    <Property Name="DOB" Type="smalldatetime" />
+    <Property Name="IdNo" Type="varchar" MaxLength="250" />
+    <Property Name="Remarks" Type="varchar" MaxLength="350" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblLevelofEducations">
+    <Key>
+      <PropertyRef Name="LevelofEducationName" />
+    </Key>
+    <Property Name="LevelofEducationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LevelofEducationName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblLoanChargesList">
+    <Key>
+      <PropertyRef Name="LoanChargesListId" />
+    </Key>
+    <Property Name="LoanChargesListId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Recur" Type="bit" />
+    <Property Name="IncludeInterest" Type="bit" />
+    <Property Name="IsTariffBased" Type="bit" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblLoanChargesListTariff">
+    <Key>
+      <PropertyRef Name="LoanChargesListTariffId" />
+    </Key>
+    <Property Name="LoanChargesListTariffId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanChargesListId" Type="int" />
+    <Property Name="FromInterval" Type="money" />
+    <Property Name="ToInterval" Type="money" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblLoanCollaterals">
+    <Key>
+      <PropertyRef Name="LoanCollateralId" />
+    </Key>
+    <Property Name="LoanCollateralId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollateralId" Type="int" />
+    <Property Name="LoanId" Type="int" Nullable="false" />
+    <Property Name="OwnerName" Type="varchar" MaxLength="250" />
+    <Property Name="RegistrationDetails" Type="varchar" MaxLength="250" />
+    <Property Name="ActualValue" Type="money" />
+    <Property Name="ForcedSaleValue" Type="money" />
+    <Property Name="Remarks" Type="varchar" MaxLength="800" />
+    <Property Name="ExpiryDate" Type="smalldatetime" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanDonors">
+    <Key>
+      <PropertyRef Name="DonorId" />
+    </Key>
+    <Property Name="DonorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DonorName" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanGuarators">
+    <Key>
+      <PropertyRef Name="LoanGuarantorId" />
+    </Key>
+    <Property Name="LoanGuarantorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="IdNo" Type="varchar" MaxLength="250" />
+    <Property Name="GuarantorTypeId" Type="int" />
+    <Property Name="LoanSerialRef" Type="varchar" MaxLength="250" />
+    <Property Name="GuaranteedAmount" Type="money" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanPurpose">
+    <Key>
+      <PropertyRef Name="LoanPurposeId" />
+    </Key>
+    <Property Name="LoanPurposeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanRecoveryOrder">
+    <Key>
+      <PropertyRef Name="RecoveryOrder" />
+    </Key>
+    <Property Name="LoanRecoveryOrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="RecoveryOrder" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ModifiedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanRepayment">
+    <Key>
+      <PropertyRef Name="RepaymentId" />
+    </Key>
+    <Property Name="RepaymentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" Nullable="false" />
+    <Property Name="BankId" Type="int" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="SerialId" Type="int" Nullable="false" />
+    <Property Name="BaseCurrencyId" Type="int" Nullable="false" />
+    <Property Name="ExchangeRate" Type="money" Nullable="false" />
+    <Property Name="ForeignAmount" Type="money" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="RepaymentNo" Type="int" Nullable="false" />
+    <Property Name="TransactionDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="ValueDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="TransType" Type="int" Nullable="false" />
+    <Property Name="PaymentMode" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="VoucherNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="DocumentNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="PaidBy" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Remarks" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoans">
+    <Key>
+      <PropertyRef Name="LoanId" />
+    </Key>
+    <Property Name="LoanId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanTypeId" Type="int" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="ManualRef" Type="varchar" MaxLength="250" />
+    <Property Name="LoanAmount" Type="money" />
+    <Property Name="InterestRate" Type="money" />
+    <Property Name="ApplicationDate" Type="smalldatetime" />
+    <Property Name="PeriodFrequency" Type="varchar" MaxLength="250" />
+    <Property Name="RepayPeriod" Type="int" />
+    <Property Name="IsMarkUpBased" Type="bit" />
+    <Property Name="MarkupAmount" Type="money" />
+    <Property Name="InterestType" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="StatusDate" Type="smalldatetime" />
+    <Property Name="PurposeId" Type="int" />
+    <Property Name="GrossPay" Type="money" />
+    <Property Name="NetPay" Type="money" />
+    <Property Name="LoanSeries" Type="varchar" MaxLength="250" />
+    <Property Name="TotalShares" Type="money" />
+    <Property Name="FreeShares" Type="money" />
+    <Property Name="IsMigrated" Type="bit" />
+    <Property Name="CreditOfficerId" Type="int" />
+    <Property Name="DonorId" Type="int" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="ApproveAmount" Type="money" />
+    <Property Name="ApproveBy" Type="varchar" MaxLength="250" />
+    <Property Name="AproveDate" Type="smalldatetime" />
+    <Property Name="PayModeId" Type="int" />
+    <Property Name="BankId" Type="int" />
+    <Property Name="ChequeType" Type="varchar" MaxLength="250" />
+    <Property Name="ChequeNo" Type="varchar" MaxLength="250" />
+    <Property Name="RepaymentChargeMethod" Type="varchar" MaxLength="250" />
+    <Property Name="DisbursedAmount" Type="money" />
+    <Property Name="ChargeAmount" Type="money" />
+    <Property Name="DisbursementDate" Type="smalldatetime" />
+    <Property Name="DisbursedBy" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanStatus">
+    <Key>
+      <PropertyRef Name="LoanStatusId" />
+    </Key>
+    <Property Name="LoanStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanStatusName" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoansType">
+    <Key>
+      <PropertyRef Name="LoanTypeId" />
+    </Key>
+    <Property Name="LoanTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefCode" Type="varchar" MaxLength="200" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="MaxPeriod" Type="int" />
+    <Property Name="InterestRate" Type="int" />
+    <Property Name="InterestRateFrequency" Type="varchar" MaxLength="200" />
+    <Property Name="MinAmount" Type="money" />
+    <Property Name="MaxAmount" Type="money" />
+    <Property Name="IncomeFactor" Type="money" />
+    <Property Name="ChargeInterestDuringGracePeriod" Type="bit" />
+    <Property Name="SharesFactor" Type="money" />
+    <Property Name="MinGuarantors" Type="int" />
+    <Property Name="MaxGuarantors" Type="int" />
+    <Property Name="InterestPayMethod" Type="varchar" MaxLength="250" />
+    <Property Name="DefaultPenalty" Type="int" />
+    <Property Name="DefaultPenaltyFrequency" Type="varchar" MaxLength="250" />
+    <Property Name="Moratorium" Type="int" />
+    <Property Name="MinShares" Type="int" />
+    <Property Name="InterestCalFormula" Type="varchar" MaxLength="250" />
+    <Property Name="MinPeriod" Type="int" />
+    <Property Name="LoansFactor" Type="money" />
+    <Property Name="RepaymentFrequency" Type="varchar" MaxLength="250" />
+    <Property Name="GracePeriod" Type="int" />
+    <Property Name="ApplyPenaltyAfterMaturity" Type="bit" />
+    <Property Name="IsSecure" Type="bit" />
+    <Property Name="Consider23rdRule" Type="bit" />
+    <Property Name="PreConsiderInterest" Type="bit" />
+    <Property Name="ForgoneInterest" Type="bit" />
+    <Property Name="AllowPartialDisbursements" Type="bit" />
+    <Property Name="AllowTopups" Type="bit" />
+    <Property Name="AdjustInterestRate" Type="bit" />
+    <Property Name="ConsiderLoanSeries" Type="bit" />
+    <Property Name="IsMarkupBased" Type="bit" />
+    <Property Name="ForcedSaleValue" Type="money" />
+    <Property Name="UseOfZeroShares" Type="bit" />
+    <Property Name="MarginBaseAmount" Type="money" />
+    <Property Name="IncrementValue" Type="varchar" MaxLength="250" />
+    <Property Name="IsMobileLoan" Type="bit" />
+    <Property Name="IsIncrementFactor" Type="bit" />
+    <Property Name="NearestPrincipleRounding" Type="varchar" MaxLength="250" />
+    <Property Name="PrincipalRoundingType" Type="varchar" MaxLength="250" />
+    <Property Name="NearestInterestRounding" Type="varchar" MaxLength="250" />
+    <Property Name="InterestRoundingType" Type="varchar" MaxLength="250" />
+    <Property Name="Category" Type="varchar" MaxLength="250" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblLoanTransactions">
+    <Key>
+      <PropertyRef Name="LoanTransactionId" />
+    </Key>
+    <Property Name="LoanTransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanId" Type="int" />
+    <Property Name="TransType" Type="int" />
+    <Property Name="TransTypeId" Type="int" />
+    <Property Name="RefId" Type="int" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLoanTypeCharges">
+    <Key>
+      <PropertyRef Name="LoanTypeChargesId" />
+    </Key>
+    <Property Name="LoanTypeChargesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoanChargesListId" Type="int" />
+    <Property Name="LoanTypeId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="IsTariffBased" Type="bit" />
+    <Property Name="IsPercentage" Type="bit" />
+    <Property Name="Value" Type="money" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="PeriodToCharge" Type="int" />
+    <Property Name="HasLimit" Type="bit" />
+    <Property Name="LowerLimit" Type="money" />
+    <Property Name="UpperLimit" Type="money" />
+    <Property Name="UseFormula" Type="bit" />
+    <Property Name="TheFormula" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tblLocations">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocationAddress" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="LocationLat" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="LocationLong" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblLogin">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="UserName" Type="varchar" MaxLength="250" />
+    <Property Name="Password" Type="varchar" MaxLength="250" />
+    <Property Name="RegistrationDate" Type="smalldatetime" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMaritalStatus">
+    <Key>
+      <PropertyRef Name="MaritalStatusName" />
+    </Key>
+    <Property Name="MaritalStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaritalStatusName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblMemberDocuments">
+    <Key>
+      <PropertyRef Name="MemberDocumentId" />
+    </Key>
+    <Property Name="MemberDocumentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileName" Type="varchar" MaxLength="250" />
+    <Property Name="FileDecription" Type="varchar" MaxLength="250" />
+    <Property Name="DocumentTypeName" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblMembers">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Payroll" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MemberNo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="SearchName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsPerson" Type="bit" Nullable="false" />
+    <Property Name="NHIFNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="KRAPin" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="NSSFNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="HudumaNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DOB" Type="datetime" />
+    <Property Name="TitleId" Type="int" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MaritalStatusId" Type="int" Nullable="false" />
+    <Property Name="Telephone1" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telephone2" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telephone3" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FaxNumber" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PhysicalLocation" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="PostalAddress" Type="varchar" MaxLength="2500" Nullable="false" />
+    <Property Name="HierarchyId" Type="int" Nullable="false" />
+    <Property Name="MemberStatusId" Type="int" Nullable="false" />
+    <Property Name="Blocked" Type="bit" Nullable="false" />
+    <Property Name="Gross" Type="money" Nullable="false" />
+    <Property Name="Nett" Type="money" Nullable="false" />
+    <Property Name="LevelofEducationId" Type="int" Nullable="false" />
+    <Property Name="BusinessSectorId" Type="int" Nullable="false" />
+    <Property Name="LevelofIncomeId" Type="int" Nullable="false" />
+    <Property Name="ClientTypeId" Type="int" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="IsRegister" Type="bit" Nullable="false" />
+    <Property Name="IsDormancy" Type="bit" Nullable="false" />
+    <Property Name="Remark" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="SecurityQuestion" Type="int" Nullable="false" />
+    <Property Name="RegistrationCode" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="NationalityId" Type="int" Nullable="false" />
+    <Property Name="CompanyRegistrationDate" Type="smalldatetime" />
+    <Property Name="RegistrationDate" Type="smalldatetime" />
+    <Property Name="CompanyCertificateNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BankId" Type="int" Nullable="false" />
+    <Property Name="BankBranchId" Type="int" Nullable="false" />
+    <Property Name="BankAccountNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CurrencyId" Type="int" Nullable="false" />
+    <Property Name="MachineName" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SecurityAnswer" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="SupervisedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="SupervisedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalShares" Type="money" />
+    <Property Name="FreeShare" Type="money" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ModifiedOn" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMemberShares">
+    <Key>
+      <PropertyRef Name="MemberShareId" />
+    </Key>
+    <Property Name="MemberShareId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="OurBranchId" Type="int" />
+    <Property Name="TheirBranchId" Type="int" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="ContributionRate" Type="money" />
+    <Property Name="MinBalance" Type="money" />
+    <Property Name="TransactionDate" Type="smalldatetime" />
+    <Property Name="HideBalance" Type="bit" />
+    <Property Name="ExemptMobileCharges" Type="bit" />
+    <Property Name="AccountNumber" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMemberStatus">
+    <Key>
+      <PropertyRef Name="MemberStatusName" />
+    </Key>
+    <Property Name="MemberStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberStatusName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblNationalitys">
+    <Key>
+      <PropertyRef Name="NationalityName" />
+    </Key>
+    <Property Name="NationalityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NationalityName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblPaymentModes">
+    <Key>
+      <PropertyRef Name="PaymentModeId" />
+    </Key>
+    <Property Name="PaymentModeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="AllowBackDated" Type="bit" />
+    <Property Name="MaxDaysofBackDated" Type="int" />
+    <Property Name="CanDisburseLoan" Type="bit" />
+    <Property Name="IsDefault" Type="bit" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="MinDeposit" Type="money" />
+    <Property Name="MaxAmount" Type="bit" />
+    <Property Name="UpperLimit" Type="money" />
+    <Property Name="EarnDividends" Type="bit" />
+    <Property Name="DividendRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Withdrawn" Type="bit" />
+    <Property Name="FixedDeposit" Type="bit" />
+    <Property Name="Transferred" Type="bit" />
+    <Property Name="GuaranteeLoan" Type="bit" />
+    <Property Name="Frequency" Type="varchar" MaxLength="250" />
+    <Property Name="EarnInterest" Type="bit" />
+    <Property Name="ChargeDefaulters" Type="bit" />
+    <Property Name="MultAccounts" Type="bit" />
+    <Property Name="CallDeposit" Type="bit" />
+    <Property Name="MinBalance" Type="money" />
+    <Property Name="CanBeOverdrawn" Type="bit" />
+    <Property Name="AccrueInterestDaily" Type="bit" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Guid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblProductCharges">
+    <Key>
+      <PropertyRef Name="ProductChargeId" />
+    </Key>
+    <Property Name="ProductChargeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="ChargeId" Type="int" />
+    <Property Name="ChargeType" Type="int" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblRelations">
+    <Key>
+      <PropertyRef Name="RelationId" />
+    </Key>
+    <Property Name="RelationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationName" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblSecurityQuestions">
+    <Key>
+      <PropertyRef Name="SecurityQuestionName" />
+    </Key>
+    <Property Name="SecurityQuestionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SecurityQuestionName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModiedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblSerials">
+    <Key>
+      <PropertyRef Name="SerialId" />
+    </Key>
+    <Property Name="SerialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Posted" Type="bit" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblStructure">
+    <Key>
+      <PropertyRef Name="StructureId" />
+    </Key>
+    <Property Name="StructureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caption" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStructureGroupDetails">
+    <Key>
+      <PropertyRef Name="StructureGroupId" />
+    </Key>
+    <Property Name="StructureGroupId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StructureValueId" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="Telephone1" Type="varchar" MaxLength="250" />
+    <Property Name="Telephone2" Type="varchar" MaxLength="250" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="250" />
+    <Property Name="FaxNumber" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="Address" Type="varchar" MaxLength="250" />
+    <Property Name="Retirement" Type="varchar" MaxLength="250" />
+    <Property Name="PostalAddress" Type="varchar" MaxLength="250" />
+    <Property Name="NoofWeek" Type="int" />
+    <Property Name="EveryDayofWeek" Type="varchar" MaxLength="250" />
+    <Property Name="DateOfMonth" Type="int" />
+    <Property Name="MaximumMembership" Type="int" />
+    <Property Name="ServiceCharge" Type="money" />
+    <Property Name="CreditOfficerID" Type="int" />
+    <Property Name="LimitSavings" Type="bit" />
+    <Property Name="GroupLoanLimit" Type="money" />
+    <Property Name="IndividualLoanLimit" Type="money" />
+    <Property Name="GroupPrefix" Type="varchar" MaxLength="250" />
+    <Property Name="Blocked" Type="bit" />
+    <Property Name="DateBlocked" Type="smalldatetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="Location" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblStructureValues">
+    <Key>
+      <PropertyRef Name="StructureValueId" />
+    </Key>
+    <Property Name="StructureValueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StructureId" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="250" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="IsGroup" Type="bit" />
+    <Property Name="Remarks" Type="varchar" MaxLength="500" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTariffs">
+    <Key>
+      <PropertyRef Name="TariffId" />
+    </Key>
+    <Property Name="TariffId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChargesId" Type="int" />
+    <Property Name="Start" Type="money" />
+    <Property Name="Stop" Type="money" />
+    <Property Name="ChargeAmount" Type="money" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTestCustomers">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTestKin">
+    <Key>
+      <PropertyRef Name="KinId" />
+    </Key>
+    <Property Name="KinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="KinName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="tblTitles">
+    <Key>
+      <PropertyRef Name="TitleName" />
+    </Key>
+    <Property Name="TitleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TitleName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="150" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblTransactionCharges">
+    <Key>
+      <PropertyRef Name="TransactionChargesId" />
+    </Key>
+    <Property Name="TransactionChargesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountTransactionId" Type="int" />
+    <Property Name="ChargesId" Type="int" />
+    <Property Name="TariffId" Type="int" />
+    <Property Name="IsPercent" Type="bit" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Total" Type="money" />
+    <Property Name="CreatedOn" Type="smalldatetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedOn" Type="smalldatetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="250" />
+    <Property Name="Timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWebContactsUs">
+    <Key>
+      <PropertyRef Name="ContantId" />
+    </Key>
+    <Property Name="ContantId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="250" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="250" />
+    <Property Name="Subject" Type="varchar" MaxLength="250" />
+    <Property Name="Message" Type="varchar" MaxLength="800" />
+    <Property Name="CreateOn" Type="smalldatetime" />
+  </EntityType>
+  <Association Name="FK_LoanApplicationCharges_tblLoans">
+    <End Role="tblLoans" Type="Self.tblLoans" Multiplicity="0..1" />
+    <End Role="LoanApplicationCharges" Type="Self.LoanApplicationCharges" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblLoans">
+        <PropertyRef Name="LoanId" />
+      </Principal>
+      <Dependent Role="LoanApplicationCharges">
+        <PropertyRef Name="LoanId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblTransactionCharges_tblAccountTransactions">
+    <End Role="tblAccountTransactions" Type="Self.tblAccountTransactions" Multiplicity="0..1" />
+    <End Role="tblTransactionCharges" Type="Self.tblTransactionCharges" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAccountTransactions">
+        <PropertyRef Name="AccountTransactionId" />
+      </Principal>
+      <Dependent Role="tblTransactionCharges">
+        <PropertyRef Name="AccountTransactionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddEditTransactions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+    <Parameter Name="TransactionDate" Type="date" Mode="In" />
+    <Parameter Name="ValueDate" Type="date" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentNo" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ModeOfPayment" Type="varchar" Mode="In" />
+    <Parameter Name="TransType" Type="varchar" Mode="In" />
+    <Parameter Name="BaseCurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencySymbol" Type="varchar" Mode="In" />
+    <Parameter Name="ExchangeRate" Type="money" Mode="In" />
+    <Parameter Name="Commission" Type="bit" Mode="In" />
+    <Parameter Name="PaidBy" Type="varchar" Mode="In" />
+    <Parameter Name="LocalCurrencyAmount" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="AmountCharge" Type="money" Mode="In" />
+    <Parameter Name="BalanceAmount" Type="money" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="InputXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="GetAllAutoGenPrefixes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetMemberContacts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getNameofCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ParseXMLToTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="pro_AddEditAutoGenNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AutoGenNumberId" Type="int" Mode="In" />
+    <Parameter Name="AutoGenNumberText" Type="varchar" Mode="In" />
+    <Parameter Name="AutoPrefixId" Type="int" Mode="In" />
+    <Parameter Name="UsePrefix" Type="bit" Mode="In" />
+    <Parameter Name="Start" Type="int" Mode="In" />
+    <Parameter Name="Stop" Type="int" Mode="In" />
+    <Parameter Name="StartFrom" Type="int" Mode="In" />
+    <Parameter Name="AllowManual" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pro_AddEditAutoGenSetup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SetupId" Type="int" Mode="In" />
+    <Parameter Name="SetName" Type="varchar" Mode="In" />
+    <Parameter Name="AutoGenNumberId" Type="int" Mode="In" />
+    <Parameter Name="IsManual" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pro_GetAllAutoGenSetups" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pro_GetAutoGenSetup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SetupId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pro_GetLoanTypeChargesUsingTariff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pro_getMemberEachAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pro_getMemberEachTransactions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="pro_InititializeSetupsName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_AccountNumberByProductId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_AddCustomerAndKin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerName" Type="varchar" Mode="In" />
+    <Parameter Name="KinName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditAccountTrans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+    <Parameter Name="TransactionDate" Type="date" Mode="In" />
+    <Parameter Name="ValueDate" Type="date" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentNo" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ModeOfPayment" Type="varchar" Mode="In" />
+    <Parameter Name="TransType" Type="varchar" Mode="In" />
+    <Parameter Name="BaseCurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="ExchangeRate" Type="money" Mode="In" />
+    <Parameter Name="Commission" Type="bit" Mode="In" />
+    <Parameter Name="PaidBy" Type="varchar" Mode="In" />
+    <Parameter Name="LocalCurrencyAmount" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="IsPercent" Type="bit" Mode="In" />
+    <Parameter Name="AmountCharge" Type="money" Mode="In" />
+    <Parameter Name="ChargeId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditAccTrans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+    <Parameter Name="TransactionDate" Type="date" Mode="In" />
+    <Parameter Name="ValueDate" Type="date" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentNo" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ModeOfPayment" Type="varchar" Mode="In" />
+    <Parameter Name="TransType" Type="varchar" Mode="In" />
+    <Parameter Name="BaseCurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="ExchangeRate" Type="money" Mode="In" />
+    <Parameter Name="Commission" Type="varchar" Mode="In" />
+    <Parameter Name="PaidBy" Type="varchar" Mode="In" />
+    <Parameter Name="LocalCurrencyAmount" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditAllCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChargesId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="IsPercent" Type="bit" Mode="In" />
+    <Parameter Name="Value" Type="money" Mode="In" />
+    <Parameter Name="Tariff" Type="bit" Mode="In" />
+    <Parameter Name="TariffAmount" Type="money" Mode="In" />
+    <Parameter Name="IgnoreLowLimit" Type="bit" Mode="In" />
+    <Parameter Name="LowerLimit" Type="money" Mode="In" />
+    <Parameter Name="UpperLimit" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditAutoGenPrefixe" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AutoPrefixId" Type="int" Mode="In" />
+    <Parameter Name="PrefixName" Type="varchar" Mode="In" />
+    <Parameter Name="PrefixText" Type="varchar" Mode="In" />
+    <Parameter Name="IsSystemAssisted" Type="bit" Mode="In" />
+    <Parameter Name="IsDateRelated" Type="bit" Mode="In" />
+    <Parameter Name="Today" Type="bit" Mode="In" />
+    <Parameter Name="Month" Type="bit" Mode="In" />
+    <Parameter Name="Year" Type="bit" Mode="In" />
+    <Parameter Name="BranchPrefix" Type="bit" Mode="In" />
+    <Parameter Name="UseBranchPrefix" Type="varchar" Mode="In" />
+    <Parameter Name="UseGroupPrefix" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditBankBranches" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BranchId" Type="int" Mode="In" />
+    <Parameter Name="BranchName" Type="varchar" Mode="In" />
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditBanks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="BankName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditBeneficiaries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BeneficiaryId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="RelationshipId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="date" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Town" Type="varchar" Mode="In" />
+    <Parameter Name="Value" Type="money" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditChargeFinal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChargesId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="IsPercent" Type="bit" Mode="In" />
+    <Parameter Name="Value" Type="money" Mode="In" />
+    <Parameter Name="Tariff" Type="bit" Mode="In" />
+    <Parameter Name="TariffAmount" Type="money" Mode="In" />
+    <Parameter Name="IgnoreLowLimit" Type="bit" Mode="In" />
+    <Parameter Name="LowerLimit" Type="money" Mode="In" />
+    <Parameter Name="UpperLimit" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditClientType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ClientTypeId" Type="int" Mode="In" />
+    <Parameter Name="ClientTypeName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditCollaterals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CollateralId" Type="int" Mode="In" />
+    <Parameter Name="CollateralName" Type="varchar" Mode="In" />
+    <Parameter Name="HasTimeLimit" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditCompanyBranches" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CompanyBranchesId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditContacts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+    <Parameter Name="Payroll" Type="varchar" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="SearchName" Type="varchar" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="IsPerson" Type="bit" Mode="In" />
+    <Parameter Name="NHIFNo" Type="varchar" Mode="In" />
+    <Parameter Name="KRAPin" Type="varchar" Mode="In" />
+    <Parameter Name="NSSFNo" Type="varchar" Mode="In" />
+    <Parameter Name="HudumaNo" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="datetime" Mode="In" />
+    <Parameter Name="TitleId" Type="int" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="MaritalStatusId" Type="int" Mode="In" />
+    <Parameter Name="Telephone1" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone2" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone3" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="varchar" Mode="In" />
+    <Parameter Name="FaxNumber" Type="varchar" Mode="In" />
+    <Parameter Name="PhysicalLocation" Type="varchar" Mode="In" />
+    <Parameter Name="PostalAddress" Type="varchar" Mode="In" />
+    <Parameter Name="MemberStatusId" Type="int" Mode="In" />
+    <Parameter Name="Blocked" Type="bit" Mode="In" />
+    <Parameter Name="LevelofEducationId" Type="int" Mode="In" />
+    <Parameter Name="IsRegister" Type="bit" Mode="In" />
+    <Parameter Name="IsDormancy" Type="bit" Mode="In" />
+    <Parameter Name="Remark" Type="varchar" Mode="In" />
+    <Parameter Name="SecurityQuestion" Type="int" Mode="In" />
+    <Parameter Name="RegistrationCode" Type="varchar" Mode="In" />
+    <Parameter Name="NationalityId" Type="int" Mode="In" />
+    <Parameter Name="CompanyRegistrationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="RegistrationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="CompanyCertificateNo" Type="varchar" Mode="In" />
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="BankBranchId" Type="int" Mode="In" />
+    <Parameter Name="BankAccountNo" Type="varchar" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="SecurityAnswer" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditCreditOfficers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CreditOfficerId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="DateJoined" Type="date" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditCurrency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyName" Type="varchar" Mode="In" />
+    <Parameter Name="CurrencySymbol" Type="varchar" Mode="In" />
+    <Parameter Name="IsMainCurrency" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditDocumentTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DocumentTypeId" Type="int" Mode="In" />
+    <Parameter Name="DocumentTypeName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditExchangeRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExchangeRateId" Type="int" Mode="In" />
+    <Parameter Name="BuyRate" Type="money" Mode="In" />
+    <Parameter Name="SellRate" Type="money" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditFiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileId" Type="int" Mode="In" />
+    <Parameter Name="FileName" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentTypeId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditFinalCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChargesId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="IsPercent" Type="bit" Mode="In" />
+    <Parameter Name="Value" Type="money" Mode="In" />
+    <Parameter Name="Tariff" Type="bit" Mode="In" />
+    <Parameter Name="TariffAmount" Type="money" Mode="In" />
+    <Parameter Name="IgnoreLowLimit" Type="bit" Mode="In" />
+    <Parameter Name="LowerLimit" Type="money" Mode="In" />
+    <Parameter Name="UpperLimit" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditGender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GenderId" Type="int" Mode="In" />
+    <Parameter Name="GenderName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditKin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KinId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="RelationId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Town" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="date" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLevelofEducations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LevelofEducationId" Type="int" Mode="In" />
+    <Parameter Name="LevelofEducationName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="ManualRef" Type="varchar" Mode="In" />
+    <Parameter Name="LoanAmount" Type="money" Mode="In" />
+    <Parameter Name="InterestRate" Type="money" Mode="In" />
+    <Parameter Name="ApplicationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="PeriodFrequency" Type="int" Mode="In" />
+    <Parameter Name="RepayPeriod" Type="int" Mode="In" />
+    <Parameter Name="IsMarkUpBased" Type="bit" Mode="In" />
+    <Parameter Name="MarkupAmount" Type="money" Mode="In" />
+    <Parameter Name="Interest" Type="money" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="StatusDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="PurposeId" Type="int" Mode="In" />
+    <Parameter Name="GrossPay" Type="money" Mode="In" />
+    <Parameter Name="NetPay" Type="money" Mode="In" />
+    <Parameter Name="LoanSeries" Type="varchar" Mode="In" />
+    <Parameter Name="TotalShares" Type="money" Mode="In" />
+    <Parameter Name="FreeShares" Type="money" Mode="In" />
+    <Parameter Name="IsMigrated" Type="bit" Mode="In" />
+    <Parameter Name="CreditOfficerId" Type="int" Mode="In" />
+    <Parameter Name="DonorId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="BranchId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanChargeListTariff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanChargesListTariffId" Type="int" Mode="In" />
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+    <Parameter Name="FromInterval" Type="money" Mode="In" />
+    <Parameter Name="ToInterval" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanChargeListTariffs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanChargesListTariffId" Type="int" Mode="In" />
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+    <Parameter Name="FromInterval" Type="money" Mode="In" />
+    <Parameter Name="ToInterval" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanChargesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Recur" Type="bit" Mode="In" />
+    <Parameter Name="IncludeInterest" Type="bit" Mode="In" />
+    <Parameter Name="IsTariffBased" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanChargesLists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Recur" Type="bit" Mode="In" />
+    <Parameter Name="IncludeInterest" Type="bit" Mode="In" />
+    <Parameter Name="IsTariffBased" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanCollateral" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanCollateralId" Type="int" Mode="In" />
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="CollateralId" Type="int" Mode="In" />
+    <Parameter Name="OwnerName" Type="varchar" Mode="In" />
+    <Parameter Name="RegistrationDetails" Type="varchar" Mode="In" />
+    <Parameter Name="ActualValue" Type="money" Mode="In" />
+    <Parameter Name="ForcedSaleValue" Type="money" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="ExpiryDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanDonors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DonorId" Type="int" Mode="In" />
+    <Parameter Name="DonorName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanGuarators" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanGuarantorId" Type="int" Mode="In" />
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="GuarantorTypeId" Type="int" Mode="In" />
+    <Parameter Name="LoanSerialRef" Type="varchar" Mode="In" />
+    <Parameter Name="GuaranteedAmount" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanPurposes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanPurposeId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanRecoveryOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanRecoveryOrderId" Type="int" Mode="In" />
+    <Parameter Name="OrderName" Type="varchar" Mode="In" />
+    <Parameter Name="RecoveryOrder" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="ManualRef" Type="varchar" Mode="In" />
+    <Parameter Name="LoanAmount" Type="money" Mode="In" />
+    <Parameter Name="InterestRate" Type="money" Mode="In" />
+    <Parameter Name="ApplicationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="PeriodFrequency" Type="varchar" Mode="In" />
+    <Parameter Name="RepayPeriod" Type="int" Mode="In" />
+    <Parameter Name="IsMarkUpBased" Type="bit" Mode="In" />
+    <Parameter Name="MarkupAmount" Type="money" Mode="In" />
+    <Parameter Name="Interest" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="StatusDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="PurposeId" Type="int" Mode="In" />
+    <Parameter Name="GrossPay" Type="money" Mode="In" />
+    <Parameter Name="NetPay" Type="money" Mode="In" />
+    <Parameter Name="LoanSeries" Type="varchar" Mode="In" />
+    <Parameter Name="TotalShares" Type="money" Mode="In" />
+    <Parameter Name="FreeShares" Type="money" Mode="In" />
+    <Parameter Name="IsMigrated" Type="bit" Mode="In" />
+    <Parameter Name="CreditOfficerId" Type="int" Mode="In" />
+    <Parameter Name="DonorId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="BranchId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoansRepayments" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RepaymentId" Type="int" Mode="In" />
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="SerialId" Type="int" Mode="In" />
+    <Parameter Name="BaseCurrencyId" Type="int" Mode="In" />
+    <Parameter Name="ExchangeRate" Type="money" Mode="In" />
+    <Parameter Name="RepaymentNo" Type="int" Mode="In" />
+    <Parameter Name="TransactionDate" Type="date" Mode="In" />
+    <Parameter Name="ValueDate" Type="date" Mode="In" />
+    <Parameter Name="TransType" Type="int" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="PaymentMode" Type="varchar" Mode="In" />
+    <Parameter Name="VoucherNo" Type="varchar" Mode="In" />
+    <Parameter Name="ChequeNo" Type="varchar" Mode="In" />
+    <Parameter Name="PaidBy" Type="varchar" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanStatusId" Type="int" Mode="In" />
+    <Parameter Name="LoanStatusName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoansType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+    <Parameter Name="RefCode" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="MaxPeriod" Type="int" Mode="In" />
+    <Parameter Name="InterestRate" Type="int" Mode="In" />
+    <Parameter Name="InterestRateFrequency" Type="varchar" Mode="In" />
+    <Parameter Name="MinAmount" Type="money" Mode="In" />
+    <Parameter Name="MaxAmount" Type="money" Mode="In" />
+    <Parameter Name="IncomeFactor" Type="money" Mode="In" />
+    <Parameter Name="ChargeInterestDuringGracePeriod" Type="bit" Mode="In" />
+    <Parameter Name="SharesFactor" Type="money" Mode="In" />
+    <Parameter Name="MinGuarantors" Type="int" Mode="In" />
+    <Parameter Name="MaxGuarantors" Type="int" Mode="In" />
+    <Parameter Name="InterestPayMethod" Type="varchar" Mode="In" />
+    <Parameter Name="DefaultPenalty" Type="int" Mode="In" />
+    <Parameter Name="DefaultPenaltyFrequency" Type="varchar" Mode="In" />
+    <Parameter Name="Moratorium" Type="int" Mode="In" />
+    <Parameter Name="MinShares" Type="int" Mode="In" />
+    <Parameter Name="InterestCalFormula" Type="varchar" Mode="In" />
+    <Parameter Name="MinPeriod" Type="int" Mode="In" />
+    <Parameter Name="LoansFactor" Type="money" Mode="In" />
+    <Parameter Name="RepaymentFrequency" Type="varchar" Mode="In" />
+    <Parameter Name="GracePeriod" Type="int" Mode="In" />
+    <Parameter Name="ApplyPenaltyAfterMaturity" Type="bit" Mode="In" />
+    <Parameter Name="IsSecure" Type="bit" Mode="In" />
+    <Parameter Name="Consider23rdRule" Type="bit" Mode="In" />
+    <Parameter Name="PreConsiderInterest" Type="bit" Mode="In" />
+    <Parameter Name="ForgoneInterest" Type="bit" Mode="In" />
+    <Parameter Name="AllowPartialDisbursements" Type="bit" Mode="In" />
+    <Parameter Name="AllowTopups" Type="bit" Mode="In" />
+    <Parameter Name="AdjustInterestRate" Type="bit" Mode="In" />
+    <Parameter Name="ConsiderLoanSeries" Type="bit" Mode="In" />
+    <Parameter Name="IsMarkupBased" Type="bit" Mode="In" />
+    <Parameter Name="ForcedSaleValue" Type="money" Mode="In" />
+    <Parameter Name="UseOfZeroShares" Type="bit" Mode="In" />
+    <Parameter Name="MarginBaseAmount" Type="money" Mode="In" />
+    <Parameter Name="IncrementValue" Type="varchar" Mode="In" />
+    <Parameter Name="IsMobileLoan" Type="bit" Mode="In" />
+    <Parameter Name="IsIncrementFactor" Type="bit" Mode="In" />
+    <Parameter Name="NearestPrincipleRounding" Type="varchar" Mode="In" />
+    <Parameter Name="PrincipalRoundingType" Type="varchar" Mode="In" />
+    <Parameter Name="NearestInterestRounding" Type="varchar" Mode="In" />
+    <Parameter Name="InterestRoundingType" Type="varchar" Mode="In" />
+    <Parameter Name="Category" Type="varchar" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditLoanTypeCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanTypeChargesId" Type="int" Mode="In" />
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="IsTariffBased" Type="bit" Mode="In" />
+    <Parameter Name="IsPercentage" Type="bit" Mode="In" />
+    <Parameter Name="Value" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="PeriodToCharge" Type="int" Mode="In" />
+    <Parameter Name="HasLimit" Type="bit" Mode="In" />
+    <Parameter Name="LowerLimit" Type="money" Mode="In" />
+    <Parameter Name="UpperLimit" Type="money" Mode="In" />
+    <Parameter Name="UseFormula" Type="bit" Mode="In" />
+    <Parameter Name="TheFormula" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditMaritals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MaritalStatusId" Type="int" Mode="In" />
+    <Parameter Name="MaritalStatusName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditmember" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="Payroll" Type="varchar" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="SearchName" Type="varchar" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="IsPerson" Type="bit" Mode="In" />
+    <Parameter Name="NHIFNo" Type="varchar" Mode="In" />
+    <Parameter Name="KRAPin" Type="varchar" Mode="In" />
+    <Parameter Name="NSSFNo" Type="varchar" Mode="In" />
+    <Parameter Name="HudumaNo" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="datetime" Mode="In" />
+    <Parameter Name="TitleId" Type="int" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="MaritalStatusId" Type="int" Mode="In" />
+    <Parameter Name="Telephone1" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone2" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone3" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="varchar" Mode="In" />
+    <Parameter Name="FaxNumber" Type="varchar" Mode="In" />
+    <Parameter Name="PhysicalLocation" Type="varchar" Mode="In" />
+    <Parameter Name="PostalAddress" Type="varchar" Mode="In" />
+    <Parameter Name="MemberStatusId" Type="int" Mode="In" />
+    <Parameter Name="Blocked" Type="bit" Mode="In" />
+    <Parameter Name="LevelofEducationId" Type="int" Mode="In" />
+    <Parameter Name="IsRegister" Type="bit" Mode="In" />
+    <Parameter Name="IsDormancy" Type="bit" Mode="In" />
+    <Parameter Name="Remark" Type="varchar" Mode="In" />
+    <Parameter Name="SecurityQuestion" Type="int" Mode="In" />
+    <Parameter Name="RegistrationCode" Type="varchar" Mode="In" />
+    <Parameter Name="NationalityId" Type="int" Mode="In" />
+    <Parameter Name="CompanyRegistrationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="RegistrationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="CompanyCertificateNo" Type="varchar" Mode="In" />
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="BankBranchId" Type="int" Mode="In" />
+    <Parameter Name="BankAccountNo" Type="varchar" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="SecurityAnswer" Type="varchar" Mode="In" />
+    <Parameter Name="HierarchyId" Type="int" Mode="In" />
+    <Parameter Name="Gross" Type="money" Mode="In" />
+    <Parameter Name="Nett" Type="money" Mode="In" />
+    <Parameter Name="TotalShares" Type="money" Mode="In" />
+    <Parameter Name="FreeShare" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditMemberFiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberDocumentId" Type="int" Mode="In" />
+    <Parameter Name="FileName" Type="varchar" Mode="In" />
+    <Parameter Name="FileDecription" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentTypeName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditmembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="Payroll" Type="varchar" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="SearchName" Type="varchar" Mode="In" />
+    <Parameter Name="IdNo" Type="varchar" Mode="In" />
+    <Parameter Name="IsPerson" Type="bit" Mode="In" />
+    <Parameter Name="NHIFNo" Type="varchar" Mode="In" />
+    <Parameter Name="KRAPin" Type="varchar" Mode="In" />
+    <Parameter Name="NSSFNo" Type="varchar" Mode="In" />
+    <Parameter Name="HudumaNo" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="DOB" Type="datetime" Mode="In" />
+    <Parameter Name="TitleId" Type="int" Mode="In" />
+    <Parameter Name="Gender" Type="varchar" Mode="In" />
+    <Parameter Name="MaritalStatusId" Type="int" Mode="In" />
+    <Parameter Name="Telephone1" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone2" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone3" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="varchar" Mode="In" />
+    <Parameter Name="FaxNumber" Type="varchar" Mode="In" />
+    <Parameter Name="PhysicalLocation" Type="varchar" Mode="In" />
+    <Parameter Name="PostalAddress" Type="varchar" Mode="In" />
+    <Parameter Name="MemberStatusId" Type="int" Mode="In" />
+    <Parameter Name="Blocked" Type="bit" Mode="In" />
+    <Parameter Name="LevelofEducationId" Type="int" Mode="In" />
+    <Parameter Name="IsRegister" Type="bit" Mode="In" />
+    <Parameter Name="IsDormancy" Type="bit" Mode="In" />
+    <Parameter Name="Remark" Type="varchar" Mode="In" />
+    <Parameter Name="SecurityQuestion" Type="int" Mode="In" />
+    <Parameter Name="RegistrationCode" Type="varchar" Mode="In" />
+    <Parameter Name="NationalityId" Type="int" Mode="In" />
+    <Parameter Name="CompanyRegistrationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="RegistrationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="CompanyCertificateNo" Type="varchar" Mode="In" />
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="BankBranchId" Type="int" Mode="In" />
+    <Parameter Name="BankAccountNo" Type="varchar" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="SecurityAnswer" Type="varchar" Mode="In" />
+    <Parameter Name="HierarchyId" Type="int" Mode="In" />
+    <Parameter Name="Gross" Type="money" Mode="In" />
+    <Parameter Name="Nett" Type="money" Mode="In" />
+    <Parameter Name="TotalShares" Type="money" Mode="In" />
+    <Parameter Name="FreeShare" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditMembershares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberShareId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ContributionRate" Type="money" Mode="In" />
+    <Parameter Name="MinBalance" Type="money" Mode="In" />
+    <Parameter Name="TransactionDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="HideBalance" Type="bit" Mode="In" />
+    <Parameter Name="ExemptMobileCharges" Type="bit" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="AccountNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditMembersshares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberShareId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ContributionRate" Type="money" Mode="In" />
+    <Parameter Name="MinBalance" Type="money" Mode="In" />
+    <Parameter Name="TransactionDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="HideBalance" Type="bit" Mode="In" />
+    <Parameter Name="ExemptMobileCharges" Type="bit" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="AccountNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditMemberStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberStatusId" Type="int" Mode="In" />
+    <Parameter Name="MemberStatusName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditNationality" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NationalityId" Type="int" Mode="In" />
+    <Parameter Name="NationalityName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditPaymentModes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PaymentModeId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="AllowBackDated" Type="bit" Mode="In" />
+    <Parameter Name="MaxDaysOfBackDated" Type="int" Mode="In" />
+    <Parameter Name="CanDisburseLoan" Type="bit" Mode="In" />
+    <Parameter Name="IsDefault" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditPayModes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PaymentModeId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="AllowBackDated" Type="bit" Mode="In" />
+    <Parameter Name="MaxDaysOfBackDated" Type="int" Mode="In" />
+    <Parameter Name="CanDisburseLoan" Type="bit" Mode="In" />
+    <Parameter Name="IsDefault" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="MinDeposit" Type="money" Mode="In" />
+    <Parameter Name="MaxAmount" Type="bit" Mode="In" />
+    <Parameter Name="UpperLimit" Type="money" Mode="In" />
+    <Parameter Name="EarnDividends" Type="bit" Mode="In" />
+    <Parameter Name="DividendRate" Type="decimal" Mode="In" />
+    <Parameter Name="Withdrawn" Type="bit" Mode="In" />
+    <Parameter Name="FixedDeposit" Type="bit" Mode="In" />
+    <Parameter Name="Transferred" Type="bit" Mode="In" />
+    <Parameter Name="GuaranteeLoan" Type="bit" Mode="In" />
+    <Parameter Name="Frequency" Type="varchar" Mode="In" />
+    <Parameter Name="EarnInterest" Type="bit" Mode="In" />
+    <Parameter Name="ChargeDefaulters" Type="bit" Mode="In" />
+    <Parameter Name="MultAccounts" Type="bit" Mode="In" />
+    <Parameter Name="CallDeposit" Type="bit" Mode="In" />
+    <Parameter Name="MinBalance" Type="money" Mode="In" />
+    <Parameter Name="CanBeOverdrawn" Type="bit" Mode="In" />
+    <Parameter Name="AccrueInterestDaily" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditProductCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductChargeId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ChargeId" Type="int" Mode="In" />
+    <Parameter Name="ChargeType" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="MinDeposit" Type="money" Mode="In" />
+    <Parameter Name="MaxAmount" Type="bit" Mode="In" />
+    <Parameter Name="UpperLimit" Type="money" Mode="In" />
+    <Parameter Name="EarnDividends" Type="bit" Mode="In" />
+    <Parameter Name="DividendRate" Type="decimal" Mode="In" />
+    <Parameter Name="Withdrawn" Type="bit" Mode="In" />
+    <Parameter Name="FixedDeposit" Type="bit" Mode="In" />
+    <Parameter Name="Transferred" Type="bit" Mode="In" />
+    <Parameter Name="GuaranteeLoan" Type="bit" Mode="In" />
+    <Parameter Name="Frequency" Type="varchar" Mode="In" />
+    <Parameter Name="EarnInterest" Type="bit" Mode="In" />
+    <Parameter Name="ChargeDefaulters" Type="bit" Mode="In" />
+    <Parameter Name="MultAccounts" Type="bit" Mode="In" />
+    <Parameter Name="CallDeposit" Type="bit" Mode="In" />
+    <Parameter Name="MinBalance" Type="money" Mode="In" />
+    <Parameter Name="CanBeOverdrawn" Type="bit" Mode="In" />
+    <Parameter Name="AccrueInterestDaily" Type="bit" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditRelations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RelationId" Type="int" Mode="In" />
+    <Parameter Name="RelationName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditRepayedLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RepaymentId" Type="int" Mode="In" />
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="BankId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="SerialId" Type="int" Mode="In" />
+    <Parameter Name="BaseCurrencyId" Type="int" Mode="In" />
+    <Parameter Name="ExchangeRate" Type="money" Mode="In" />
+    <Parameter Name="ForeignAmount" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="RepaymentNo" Type="int" Mode="In" />
+    <Parameter Name="TransactionDate" Type="date" Mode="In" />
+    <Parameter Name="ValueDate" Type="date" Mode="In" />
+    <Parameter Name="TransType" Type="int" Mode="In" />
+    <Parameter Name="PaymentMode" Type="varchar" Mode="In" />
+    <Parameter Name="VoucherNo" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentNo" Type="varchar" Mode="In" />
+    <Parameter Name="PaidBy" Type="varchar" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditSecurityQuestions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SecurityQuestionId" Type="int" Mode="In" />
+    <Parameter Name="SecurityQuestionName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditsLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="ManualRef" Type="varchar" Mode="In" />
+    <Parameter Name="LoanAmount" Type="money" Mode="In" />
+    <Parameter Name="InterestRate" Type="money" Mode="In" />
+    <Parameter Name="ApplicationDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="PeriodFrequency" Type="int" Mode="In" />
+    <Parameter Name="RepayPeriod" Type="int" Mode="In" />
+    <Parameter Name="IsMarkUpBased" Type="bit" Mode="In" />
+    <Parameter Name="MarkupAmount" Type="money" Mode="In" />
+    <Parameter Name="Interest" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="int" Mode="In" />
+    <Parameter Name="StatusDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="PurposeId" Type="int" Mode="In" />
+    <Parameter Name="GrossPay" Type="money" Mode="In" />
+    <Parameter Name="NetPay" Type="money" Mode="In" />
+    <Parameter Name="LoanSeries" Type="varchar" Mode="In" />
+    <Parameter Name="TotalShares" Type="money" Mode="In" />
+    <Parameter Name="FreeShares" Type="money" Mode="In" />
+    <Parameter Name="IsMigrated" Type="bit" Mode="In" />
+    <Parameter Name="CreditOfficerId" Type="int" Mode="In" />
+    <Parameter Name="DonorId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="BranchId" Type="int" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditStructure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StructureId" Type="int" Mode="In" />
+    <Parameter Name="Caption" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="varchar" Mode="In" />
+    <Parameter Name="ParentId" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditStructureGroupDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StructureGroupId" Type="int" Mode="In" />
+    <Parameter Name="StructureValueId" Type="int" Mode="In" />
+    <Parameter Name="Code" Type="varchar" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone1" Type="varchar" Mode="In" />
+    <Parameter Name="Telephone2" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="varchar" Mode="In" />
+    <Parameter Name="FaxNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Address" Type="varchar" Mode="In" />
+    <Parameter Name="Retirement" Type="varchar" Mode="In" />
+    <Parameter Name="PostalAddress" Type="varchar" Mode="In" />
+    <Parameter Name="NoofWeek" Type="int" Mode="In" />
+    <Parameter Name="EveryDayofWeek" Type="varchar" Mode="In" />
+    <Parameter Name="DateOfMonth" Type="int" Mode="In" />
+    <Parameter Name="MaximumMembership" Type="int" Mode="In" />
+    <Parameter Name="ServiceCharge" Type="money" Mode="In" />
+    <Parameter Name="CreditOfficerID" Type="int" Mode="In" />
+    <Parameter Name="LimitSavings" Type="bit" Mode="In" />
+    <Parameter Name="GroupLoanLimit" Type="money" Mode="In" />
+    <Parameter Name="IndividualLoanLimit" Type="money" Mode="In" />
+    <Parameter Name="GroupPrefix" Type="varchar" Mode="In" />
+    <Parameter Name="Blocked" Type="bit" Mode="In" />
+    <Parameter Name="DateBlocked" Type="date" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Location" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditStructureValues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StructureValueId" Type="int" Mode="In" />
+    <Parameter Name="StructureId" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="ParentId" Type="int" Mode="In" />
+    <Parameter Name="IsGroup" Type="bit" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditTariff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TariffId" Type="int" Mode="In" />
+    <Parameter Name="ChargesId" Type="int" Mode="In" />
+    <Parameter Name="Start" Type="money" Mode="In" />
+    <Parameter Name="Stop" Type="money" Mode="In" />
+    <Parameter Name="ChargeAmount" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TitleId" Type="int" Mode="In" />
+    <Parameter Name="TitleName" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditTransactionCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TransactionChargesId" Type="int" Mode="In" />
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+    <Parameter Name="ChargesId" Type="int" Mode="In" />
+    <Parameter Name="IsPercent" Type="bit" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Total" Type="money" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditWebContants" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContantId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Subject" Type="varchar" Mode="In" />
+    <Parameter Name="Message" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_AddEditWebContantsUs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContantId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Subject" Type="varchar" Mode="In" />
+    <Parameter Name="Message" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_AddhomeContants" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+    <Parameter Name="FullName" Type="varchar" Mode="In" />
+    <Parameter Name="PhoneNo" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Subject" Type="varchar" Mode="In" />
+    <Parameter Name="Message" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_AddTransactions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+    <Parameter Name="TransactionDate" Type="date" Mode="In" />
+    <Parameter Name="ValueDate" Type="date" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="DocumentNo" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="ModeOfPayment" Type="varchar" Mode="In" />
+    <Parameter Name="TransType" Type="varchar" Mode="In" />
+    <Parameter Name="BaseCurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+    <Parameter Name="CurrencySymbol" Type="varchar" Mode="In" />
+    <Parameter Name="ExchangeRate" Type="money" Mode="In" />
+    <Parameter Name="Commission" Type="bit" Mode="In" />
+    <Parameter Name="PaidBy" Type="varchar" Mode="In" />
+    <Parameter Name="LocalCurrencyAmount" Type="money" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="AmountCharge" Type="money" Mode="In" />
+    <Parameter Name="BalanceAmount" Type="money" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="ChargesId" Type="xml" Mode="In" />
+    <Parameter Name="TariffId" Type="xml" Mode="In" />
+    <Parameter Name="IsPercent" Type="xml" Mode="In" />
+    <Parameter Name="Total" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="proc_AddUpdateDeleteLocations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LocationId" Type="int" Mode="In" />
+    <Parameter Name="LocationAddress" Type="varchar" Mode="In" />
+    <Parameter Name="LocationLat" Type="varchar" Mode="In" />
+    <Parameter Name="LocationLong" Type="varchar" Mode="In" />
+    <Parameter Name="Delete" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="proc_CountLoanRows" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_deleteLoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_DeleteLoanAllCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_DeleteLoanApplicationDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_DeleteLoanCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_EditLoanRecoveryOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderName" Type="varchar" Mode="In" />
+    <Parameter Name="RecoveryOrder" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GenerateLoanCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_generateMemberNo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="MemberNo" Type="varchar" Mode="In" />
+    <Parameter Name="AutoPrefixId" Type="int" Mode="In" />
+    <Parameter Name="PrefixeName" Type="varchar" Mode="In" />
+    <Parameter Name="PrefixeText" Type="varchar" Mode="In" />
+    <Parameter Name="isDateRelate" Type="bit" Mode="In" />
+    <Parameter Name="Today" Type="bit" Mode="In" />
+    <Parameter Name="Month" Type="bit" Mode="In" />
+    <Parameter Name="Year" Type="bit" Mode="In" />
+    <Parameter Name="Branch" Type="bit" Mode="In" />
+    <Parameter Name="UseBranchPrefixe" Type="varchar" Mode="In" />
+    <Parameter Name="UseGroup" Type="varchar" Mode="In" />
+    <Parameter Name="PrefixeId" Type="int" Mode="In" />
+    <Parameter Name="AutoGenNumberId" Type="int" Mode="In" />
+    <Parameter Name="AutoGenNumberText" Type="varchar" Mode="In" />
+    <Parameter Name="UsePrefix" Type="bit" Mode="In" />
+    <Parameter Name="Start" Type="int" Mode="In" />
+    <Parameter Name="Stop" Type="int" Mode="In" />
+    <Parameter Name="StartFrom" Type="int" Mode="In" />
+    <Parameter Name="AllowManual" Type="bit" Mode="In" />
+    <Parameter Name="Member" Type="varchar" Mode="In" />
+    <Parameter Name="n" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GenerateMemberNumber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAccNumberByProductId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAccountsTransactionsAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAccountTransactionByMemberId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAccountTransactionByMemberIdProductId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="AccountNumber" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAccountTransactionsAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAccTransactionByMemberIdProductId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetActiveLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllActivebLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllActiveLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllApplicationLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllApplicationsChargesLoanId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllApplyLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllAppraisedLoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllAutoGenNumbers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllAutoGenPrefixes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Proc_GetAllBackBranch" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BankId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getAllBalanceAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllBankBranches" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllBanks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllBeneficiaries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllChargesFinal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllClientTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALLCollateral" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALLCollaterals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllCompanyBranches" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllContacts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllCreditOfficers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllCurrency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_getAllCurrencyandExchangerate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllDocumentTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllExchangeRates" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllFiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllGender" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllGenders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllKins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLevelofEducations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_getAllLoanApplicationCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanChargeListTariff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoanChargeListTariffByLoanChargesListId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanChargesListId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanChargesbyLoanId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanChargesList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoanChargesLoanId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanCollateral" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanCollaterals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanDonors" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoanGuarators" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanPurpose" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoanRecoverOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoanStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoansType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoansTypeCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoansTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllLoanTypeChargesByLoansTypeId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAllLoanTypes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllMaritials" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALlMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALLMemberShare" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALLMemberShares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALLMembersShares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllMemberStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllMessages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllMessagesWithLimit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllNationality" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllPayModes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetALLProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllProductChargeById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetALLProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllRegistredMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllRelations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllSecurityQuestions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllStructureGroupDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllStructures" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllStructureValues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllTariff" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllTitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllTransactionCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllTransactionCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAllWithdrawals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetAutoGenNumberById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AutoGenNumberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetAutoGenPrefixeById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AutoPrefixId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_getBalanceAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getBalancesAmountAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProductId" Type="int" Mode="In" />
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+    <Parameter Name="AccountNumber" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="proc_GetChargeById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChargeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getChargesByAccountTransactionId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetCurrencyIdByMemberId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getDefaultLoanStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_getDefaultPayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_getDefaultStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetDisbursedLoan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_getExRateByCurrencyId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CurrencyId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetGuaranteedAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getLatestWebContantsUs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetLoanTypeById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanTypeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetMainCurrency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetMemberById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetMemberShareByMemberId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetMemberShared" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberShareId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetMemberSharesByMemberId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetMembersSharesALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_getNameofCharge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Proc_GetParentStructure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetParentUsingChild" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ParentId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getReadMessages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_GetRepayedLoans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getStractureId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ParentId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_GetStructure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ParentId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getStructureTree" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_GetStructureValueId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StructureId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getSumAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_GetSumLoanApplicationCharges" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_getTariffAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Amount" Type="money" Mode="In" />
+  </Function>
+  <Function Name="Proc_getTariffChargeAmount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Amount" Type="money" Mode="In" />
+  </Function>
+  <Function Name="proc_GetTotalShare" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MemberId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_getUnReadMessages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_ListAllLocations" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_ListLocaton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LocationId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_MaxRepayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoanId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_ParseXMLToTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="proc_SumMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Proc_TariffByChargesId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ChargesId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_TestTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="InputXML" Type="xml" Mode="In" />
+  </Function>
+  <Function Name="proc_UpdateMessage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_UpdateMessages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="proc_UpdateTransaction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AccountTransactionId" Type="int" Mode="In" />
+    <Parameter Name="Remarks" Type="varchar" Mode="In" />
+    <Parameter Name="IsBlocked" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Sp_GetALLProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_ReturnFields" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tableName" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="PowerFinancialDBModelStoreContainer">
+    <EntitySet Name="CompanyStructureContent" EntityType="Self.CompanyStructureContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoanApplicationCharges" EntityType="Self.LoanApplicationCharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAccountTransactions" EntityType="Self.tblAccountTransactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAutoGenNumbers" EntityType="Self.tblAutoGenNumbers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAutoGenPrefixes" EntityType="Self.tblAutoGenPrefixes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAutoGenSetups" EntityType="Self.tblAutoGenSetups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBankBranches" EntityType="Self.tblBankBranches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBanks" EntityType="Self.tblBanks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBeneficiaries" EntityType="Self.tblBeneficiaries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCharges" EntityType="Self.tblCharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblClientType" EntityType="Self.tblClientType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCollaterals" EntityType="Self.tblCollaterals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCompanyBranches" EntityType="Self.tblCompanyBranches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblContacts" EntityType="Self.tblContacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCreditOfficers" EntityType="Self.tblCreditOfficers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCurrency" EntityType="Self.tblCurrency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDocumentTypes" EntityType="Self.tblDocumentTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblExchangeRate" EntityType="Self.tblExchangeRate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFiles" EntityType="Self.tblFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblGenders" EntityType="Self.tblGenders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblIndexContacts" EntityType="Self.tblIndexContacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblKins" EntityType="Self.tblKins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLevelofEducations" EntityType="Self.tblLevelofEducations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanChargesList" EntityType="Self.tblLoanChargesList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanChargesListTariff" EntityType="Self.tblLoanChargesListTariff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanCollaterals" EntityType="Self.tblLoanCollaterals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanDonors" EntityType="Self.tblLoanDonors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanGuarators" EntityType="Self.tblLoanGuarators" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanPurpose" EntityType="Self.tblLoanPurpose" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanRecoveryOrder" EntityType="Self.tblLoanRecoveryOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanRepayment" EntityType="Self.tblLoanRepayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoans" EntityType="Self.tblLoans" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanStatus" EntityType="Self.tblLoanStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoansType" EntityType="Self.tblLoansType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanTransactions" EntityType="Self.tblLoanTransactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLoanTypeCharges" EntityType="Self.tblLoanTypeCharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLocations" EntityType="Self.tblLocations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblLogin" EntityType="Self.tblLogin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMaritalStatus" EntityType="Self.tblMaritalStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMemberDocuments" EntityType="Self.tblMemberDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMembers" EntityType="Self.tblMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMemberShares" EntityType="Self.tblMemberShares" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMemberStatus" EntityType="Self.tblMemberStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblNationalitys" EntityType="Self.tblNationalitys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPaymentModes" EntityType="Self.tblPaymentModes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProductCharges" EntityType="Self.tblProductCharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRelations" EntityType="Self.tblRelations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSecurityQuestions" EntityType="Self.tblSecurityQuestions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSerials" EntityType="Self.tblSerials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStructure" EntityType="Self.tblStructure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStructureGroupDetails" EntityType="Self.tblStructureGroupDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStructureValues" EntityType="Self.tblStructureValues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTariffs" EntityType="Self.tblTariffs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTestCustomers" EntityType="Self.tblTestCustomers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTestKin" EntityType="Self.tblTestKin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTitles" EntityType="Self.tblTitles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTransactionCharges" EntityType="Self.tblTransactionCharges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWebContactsUs" EntityType="Self.tblWebContactsUs" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_LoanApplicationCharges_tblLoans" Association="Self.FK_LoanApplicationCharges_tblLoans">
+      <End Role="tblLoans" EntitySet="tblLoans" />
+      <End Role="LoanApplicationCharges" EntitySet="LoanApplicationCharges" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblTransactionCharges_tblAccountTransactions" Association="Self.FK_tblTransactionCharges_tblAccountTransactions">
+      <End Role="tblAccountTransactions" EntitySet="tblAccountTransactions" />
+      <End Role="tblTransactionCharges" EntitySet="tblTransactionCharges" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
